@@ -1,7 +1,14 @@
 import React from 'react';
 import { FilterLabel } from './Filter.Styled';
+import { useDispatch, useSelector } from 'react-redux';
+import { redChangeFilter } from 'redux/contactsSlice';
 
-export const Filter = ({ filter, handleChange }) => {
+export const Filter = () => {
+  const filter = useSelector(state => state.contactsStore.filter);
+  const dispatch = useDispatch();
+  const handleChange = value => {
+    dispatch(redChangeFilter(value));
+  };
   return (
     <>
       <FilterLabel>
