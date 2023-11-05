@@ -17,7 +17,6 @@ const contactsStoreConfig = {
   key: 'contactsStore',
   storage,
   whitelist: ['contacts'],
-  // blacklist: ['filter'],
 };
 
 export const store = configureStore({

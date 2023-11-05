@@ -25,8 +25,6 @@ export const AddForm = () => {
       ...values,
     };
 
-    // props.addContact(newContact);
-
     if (
       contacts.find(
         contact =>
