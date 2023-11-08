@@ -1,5 +1,5 @@
 import React from 'react';
-import { FilterLabel } from './Filter.Styled';
+import { FilterInput, FilterLabel } from './Filter.Styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { redChangeFilter } from 'redux/contactsSlice';
 
@@ -13,7 +13,7 @@ export const Filter = () => {
     <>
       <FilterLabel>
         Find contact by name or number
-        <input
+        <FilterInput
           name="filter"
           type="text"
           value={filter}

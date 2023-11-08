@@ -27,13 +27,13 @@ ul {
 }
 
 h2 {
-  background-color: lightgrey;
-  width: 440px;
+  /* background-color: lightgrey; */
   text-align: center;
 }
 
 button {
   display: flex;
+  margin: 0 auto;
   align-items: center;
   cursor: pointer;
   border: none;

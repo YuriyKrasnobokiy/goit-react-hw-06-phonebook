@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactsPhonelist } from './ContactsList.Styled';
+import { ContactsLi, ContactsPhonelist } from './ContactsList.Styled';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { redDeleteContact } from 'redux/contactsSlice';
 import { useDispatch, useSelector } from 'react-redux';
@@ -25,14 +25,14 @@ export const ContactsList = () => {
     <>
       <ContactsPhonelist>
         {visibleContacts().map(({ id, name, number }) => (
-          <li key={id}>
+          <ContactsLi key={id}>
             <p>{name}</p>
             <p>{number}</p>
             <button onClick={() => deleteContact(id)} type="button">
               Delete
               <RiDeleteBin6Line size={18} />
             </button>
-          </li>
+          </ContactsLi>
         ))}
       </ContactsPhonelist>
     </>
